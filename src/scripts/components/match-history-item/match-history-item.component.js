@@ -71,10 +71,14 @@ class MatchHistoryItemComponent extends Component {
     getTeam (team) {
         if (team && team.length) {
             return team.map(player => {
-               return <li key={player.summonerName}>
-                   <img src={player.champion.path} alt={player.champion.name} />
-                   <span>{player.summonerName}</span>
-               </li>
+                let classes = [];
+                if (player.default) {
+                    classes.push('default');
+                }
+                return <li className={classes.join(' ')} key={player.summonerName}>
+                    <img src={player.champion.path} alt={player.champion.name} />
+                    <span>{player.summonerName}</span>
+                </li>
             });
         }
     }
