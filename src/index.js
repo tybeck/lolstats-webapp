@@ -1,8 +1,13 @@
-import './index.css'
+'use strict';
 
-import React from 'react'
-import {render} from 'react-dom'
+import './styles/index.sass'
+import 'react-toastify/dist/ReactToastify.css';
 
-import App from './App'
+import './scripts/fontawesome';
 
-render(<App/>, document.querySelector('#app'))
+import React from 'react';
+import { render } from 'react-dom';
+
+import App from './scripts/components/app.component';
+
+render(<App />, document.querySelector('#app'));
